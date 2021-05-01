@@ -88,6 +88,7 @@ struct HomeView: View {
                                     .frame(width: 150)
                                     .padding(i % 2 == 0 ? .trailing : .leading, 10)
                                     .multilineTextAlignment(.center)
+                                    .animation(Animation.easeOut(duration: 0.5))
                                 
                                 
                                 if i % 2 != 0 {
@@ -126,7 +127,7 @@ struct HomeView: View {
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.red)
-                    .animation(.default)
+                    .animation(Animation.easeIn(duration: 0.5))
                 } else {
                     Button(action: {
                         self.viewModel.nextOrderTapped()
@@ -137,7 +138,7 @@ struct HomeView: View {
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.red)
-                    .animation(.default)
+                    .animation(Animation.easeIn(duration: 0.5))
                 }
             }
             .padding()
